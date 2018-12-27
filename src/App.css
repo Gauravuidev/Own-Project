@@ -1,0 +1,52 @@
+
+.mainBlock{
+  width: 70%;
+  margin: 20px auto 0;
+  border: 1px solid #ddd;
+}
+.mainBlock > div:first-of-type {
+  background: #eee;
+}
+.mainBlock > div:last-of-type {
+  margin: 5px 75px 5px 10px;
+}
+.mainBlock > div:first-of-type > span:first-of-type{
+  display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0px 5px;
+    font-weight: 500;
+}
+.mainBlock > div:first-of-type > span:last-of-type{
+    float: right;
+    line-height: 25px;
+}
+.icon{
+  background: white;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-weight: bold;
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+  height: 20px;
+  line-height: 17px;
+  border: 1px solid #ddd;
+}
+.close {
+  float: right;
+    background: #eee;
+    border-radius: 15px;
+}
+select {
+  border: 1px solid #ddd;
+    margin-left: 30px;
+    border-radius: 10px;
+    padding: 2px 7px;
+}
+section {
+  margin: 5px;
+}
+section div{
+  margin: 5px 0px;
+}

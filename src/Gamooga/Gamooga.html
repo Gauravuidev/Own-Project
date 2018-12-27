@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <style>   
+         
+        .wrapper {
+            background: #fafafa;
+            font-size: 12px;
+        }    
+        .wrapper .title {
+            background: white;
+            padding: 10px 0px;
+            font-size: 2rem;
+        }
+        .row > div {
+            padding: 10px 10px 10px;
+            /* background: white; */
+        }
+        [class^="col-"] > div{
+            background: white;
+            overflow: auto;
+            
+        }
+        .row .userProfile {
+            background: url("gaurav.jpg") no-repeat top left;
+            height: 250px;
+            background-size: 100% 80px;
+            background-color: white;
+            padding-top: 50px;
+        }
+        img.profile{
+            height: 60px;
+            width: 60px;
+            border: 1px solid #b9bab9;
+            border-radius: 50%;
+        }
+        .row .userProfile h3{
+            color:#6f6c6d
+        }
+        .row .userProfile .col-md-6{
+           margin-top: 15px;
+        }
+        .row .userProfile .col-md-6 p{
+            color:#bfc0c2
+        }
+        .row .userProfile .col-md-6 span{
+            color:#6f6c6d
+        } 
+        .row .loggedIn {
+            margin-top: 20px;
+            padding-top: 10px;
+        }
+        .row .loggedIn > span {
+            color: #bfc0c2;
+            margin-left: 10px;
+        }
+        .row .loggedIn > div:not(:last-of-type) {
+            margin-top: 15px;
+            margin-left: 10px;
+        }
+        .row .loggedIn > div > img {
+            height: 50px;
+            width: 50px;
+        }
+        .row .loggedIn > div:not(:last-of-type) >span {
+            font-size: 2rem;
+            vertical-align: middle;
+            margin-left: 20px;
+            color:#6f6c6d;
+        }
+        .row .loggedIn > div:last-of-type{
+            background: #e8f5fd;
+            padding: 10px;
+            margin-top: 15px;
+        }
+        .row .loggedIn > div:last-of-type span:first-of-type{
+            font-size: 1.4rem;
+            color: #6f6c6d;
+        }
+        .row .loggedIn > div:last-of-type span:last-of-type{
+            font-size: 1.4rem;
+            color: #bfc0c2;
+            margin-top: 2px;
+        }
+        .row .userOptions {
+            margin-top: 20px;
+            padding: 0px;
+        }
+        .row .userOptions ul {
+            padding: 0px;
+            margin-bottom: 0px;
+        }
+        .row .userOptions ul li {
+            list-style-type: none;
+            padding: 5px;
+        }
+        .row .userOptions ul li:hover {
+            background: #e8f5fd;
+        }
+        .row .userOptions ul li:hover span {
+            color: #7ac7f7;
+        }
+        .row .userOptions ul li img, .followUser div img{
+            height: 30px;
+            width: 30px;
+        }
+        .row .userOptions ul li span, .followUser div span {
+            font-size: 1.2rem;
+            vertical-align: middle;
+            margin-left: 10px;
+            color: #6f6c6d;
+        }
+        
+        .row .followUser > span{
+            color: #bfc0c2;
+            font-size: 1rem;
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .row .followUser > div {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .row .followUser input[type=checkbox] {
+         margin-right: 15px;
+        }
+        .row .followUser label {
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+        .row .followUser input[type=checkbox]:checked:before {
+            content: "\e013";
+            background: #3bb9e3;
+            color: white;
+            padding: 4px 13px 4px 13px;
+            position: relative;
+            right: 11px;
+            border-radius: 3px;
+        }
+        .row .followUser input[type=checkbox]:checked + label {
+            color: #3bb9e3;
+        }
+        .row .followUser input[type=checkbox]:before {
+            content: "\e008";
+            border: 1px solid #3bb9e3;
+            color: #3bb9e3;
+            padding: 4px 15px 4px 10px;
+            position: relative;
+            right: 10px;
+            background: white;
+            border-radius: 3px;
+            top: 4px;
+        }
+        .row .followUser input[type=checkbox]:after {
+            content: "\002b";
+            color: #3bb9e3;
+            position: relative;
+            left: -27px;
+            font-size: 0.8rem;
+            top: -3px;
+        }
+        .row .search {
+            background: #e8f5fd;
+            height: auto;
+            padding: 10px 0px;
+        }
+        .row .search img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .row .search textarea{
+            width: 100%;
+            border: 3px solid #a6d9f7;
+            border-radius: 10px;
+            color: #bfc0c2;
+            padding: 5px;
+        }
+        textarea::-webkit-input-placeholder {
+        color: #d8d9d9;
+        }
+        .row .search button{
+            background: #3bb9e3;
+            color: white;
+            padding: 5px 30px;
+            border: 0px;
+            border-radius: 15px;
+            margin-top: 3px;
+        }
+        .row .comments {
+            margin-top: 20px;
+            padding: 10px 0px;
+        }
+        .row .comments .col-md-10 {
+            padding-left: 0px;
+            /* width: 85%; */
+        }
+        /* .row .comments .col-xs-9, .row .comments .col-sm-10 {
+            width: inherit;
+        } 
+        .row .comments .col-xs-3, .row .comments .col-sm-2  {
+            width: inherit;
+        } */
+        .row .comments .col-md-2 {
+            padding-right: 0px;
+            /* width: 14%; */
+        }
+        .row .comments .col-md-2 img {
+            width: 50px;
+            height: 50px;
+        }
+        .row .comments .col-md-10 span:first-of-type {
+            color: #535658;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        .row .comments .col-md-10 span:last-of-type{
+            color: #bfc0c2;
+        }
+        .row .comments .col-md-10 p {
+            color: #535658;
+            margin-top: 5px;
+            word-break: break-all;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title text-center">Demo App</div>
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-3 col-xs-12 col-sm-4">
+                            <div class="userProfile text-center">
+                                    <span><img class="profile" src="gaurav.jpg" alt="userProfile"/></span>
+                                    <h3>Gaurav</h3>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <span>5</span>
+                                        <p>Posts</p>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6">
+                                        <span>2</span>
+                                        <p>Followings</p>
+                                    </div>
+                            </div>
+                            <div class="loggedIn">
+                                <span>Logged in as</span>
+                                <div><img class="profile" src="gaurav.jpg"/><span>Gaurav</span></div>
+                                <div><span>Change User</span><span class="pull-right glyphicon glyphicon-menu-left"></span></div>
+                            </div>
+                            <div class="userOptions col-md-10 col-md-offset-2">
+                                <ul>
+                                    <li><img class="profile" src="gaurav.jpg"/><span>Kiara</span></li>
+                                    <li><img class="profile" src="gaurav.jpg"/><span>Tony Scott</span></li>
+                                    <li><img class="profile" src="gaurav.jpg"/><span>Zoe Keating</span></li>
+                                    <li><img class="profile" src="gaurav.jpg"/><span>Chris Messina</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xs-12 col-sm-8">
+                            <div class="search">
+                                <div class="col-md-1 col-xs-2 col-sm-1">
+                                    <img class="profile pull-left" src="gaurav.jpg"/>
+                                </div>
+                                <div class="col-md-11 col-xs-10 col-sm-11">
+                                    <textarea  rows="3" cols="50" placeholder="What's happening?"></textarea>
+                                    <button type="button" class="pull-right">Post</button>
+                                </div>
+                                </div>
+                            <div class="comments">
+                                <div class="col-md-2 col-xs-3 col-sm-2">
+                                    <img class="profile" src="gaurav.jpg"/>
+                                </div>
+                                <div class="col-md-10 col-xs-9 col-sm-10">
+                                    <span>Gaurav </span><span> . 13:56, 20th Dec 2018</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum eleifend dignissim. Mauris vitae rutrum lacus. In id egestas turpis. Mauris vehicula turpis in consectetur iaculis. Aenean vestibulum cursus lorem a aliquet.</p>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="col-md-2 col-xs-3 col-sm-2">
+                                        <img class="profile" src="gaurav.jpg"/>
+                                    </div>
+                                    <div class="col-md-10 col-xs-9 col-sm-10">
+                                    <span>Gaurav </span><span> . 13:56, 20th Dec 2018</span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum eleifend dignissim. Mauris vitae rutrum lacus. In id egestas turpis. Mauris vehicula turpis in consectetur iaculis. Aenean vestibulum cursus lorem a aliquet.</p>
+                                    <img class="img-responsive" src="tree.jpeg"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12 col-sm-4">
+                            <div class="followUser">
+                                <span>FOLLOW USER</span>
+                                <div>
+                                    <img class="profile" src="gaurav.jpg"/>
+                                    <input type="checkbox" class="pull-right glyphicon"/> 
+                                    <label>Kiara</label>
+                                </div>
+                                <div>
+                                    <img class="profile" src="gaurav.jpg"/>
+                                    <input type="checkbox" class="pull-right glyphicon"/> 
+                                    <label>Tony Scott</label>
+                                </div>
+                                <div>
+                                    <img class="profile" src="gaurav.jpg"/>
+                                    <input type="checkbox" class="pull-right glyphicon"/> 
+                                    <label>Zoe Keating</label>
+                                </div>
+                                <div>
+                                    <img class="profile" src="gaurav.jpg"/>
+                                    <input type="checkbox" class="pull-right glyphicon" /> 
+                                    <label>Chris Messina</label>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
